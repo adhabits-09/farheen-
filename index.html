@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Farheen Almas - Empowering Women to Rise & Shine ✨</title>
     
     <!-- SEO & Performance Meta -->
     <meta name="description" content="Women-only community with Farheen Almas, helping homemakers and students learn digital skills and start working online step-by-step.">
-    <!-- ⚠️ Yahan apna naya image URL daalna -->
+    <!-- TODO: apna real image link daalna -->
     <meta property="og:image" content="https://via.placeholder.com/800x800.png?text=Farheen+Almas">
     <meta name="theme-color" content="#FF5E8E">
     
@@ -21,7 +21,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     
-    <!-- Meta Pixel Code (same as aapka) -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -40,7 +40,7 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        /* ===== OPTIMIZED CSS ===== */
+        /* ===== VARIABLES ===== */
         :root {
             --primary-coral: #FF5E8E;
             --lavender: #6A67CE;
@@ -51,10 +51,13 @@
             --success: #00C9B7;
             --shadow: 0 6px 20px rgba(106, 103, 206, 0.12);
             --shadow-hover: 0 10px 30px rgba(106, 103, 206, 0.18);
-            --glow: 0 0 20px rgba(255, 94, 142, 0.35);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         
         body {
             font-family: 'Inter', sans-serif;
@@ -64,27 +67,39 @@
             overflow-x: hidden;
         }
 
-        /* ===== SIMPLIFIED ANIMATIONS ===== */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ===== ANIMATIONS ===== */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .animate-fade-in { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
-        .animate-stagger { animation: fadeInUp 0.6s ease-out forwards; animation-delay: calc(var(--order) * 0.1s); opacity: 0; }
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
 
-        /* ===== REDUCED GAPS & SPACING ===== */
-        section { padding: 50px 0; position: relative; }
-        .mb-5 { margin-bottom: 1.5rem !important; }
-        .mb-4 { margin-bottom: 1rem !important; }
-        .mb-3 { margin-bottom: 0.75rem !important; }
-        .g-5 { gap: 1.5rem !important; }
+        .animate-stagger {
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: calc(var(--order) * 0.1s);
+            opacity: 0;
+        }
+
+        /* ===== GLOBAL SPACING ===== */
+        section {
+            padding: 60px 0;
+            position: relative;
+        }
 
         /* ===== HERO SECTION ===== */
         .hero-section {
             background: linear-gradient(135deg, var(--white), var(--cream));
-            padding: 70px 0 50px;
-            overflow: hidden;
+            padding: 80px 0 50px;
+            text-align: center;
         }
 
         .badge-custom {
@@ -93,12 +108,10 @@
             padding: 0.6rem 1.5rem;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             display: inline-block;
             margin-bottom: 1rem;
             box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
         }
 
         .gradient-text {
@@ -108,11 +121,15 @@
             font-weight: 800;
         }
 
+        .hero-title {
+            font-size: 2.6rem;
+        }
+
         .hero-text-compact {
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-            font-size: 1.125rem;
-            line-height: 1.4;
+            max-width: 620px;
+            margin: 0.75rem auto 0;
+            font-size: 1.05rem;
+            line-height: 1.5;
         }
 
         /* ===== ABOUT SECTION ===== */
@@ -124,7 +141,6 @@
             box-shadow: var(--shadow);
             border: 6px solid var(--white);
             transition: all 0.4s ease;
-            margin-top: 0 !important;
         }
 
         .about-img:hover {
@@ -140,7 +156,7 @@
         .wa-btn {
             background: var(--success);
             color: var(--white);
-            padding: 0.75rem 1.5rem;
+            padding: 0.8rem 1.8rem;
             border-radius: 50px;
             font-weight: 700;
             border: none;
@@ -161,7 +177,7 @@
         }
 
         .wa-btn:active {
-            transform: translateY(0) scale(0.98);
+            transform: translateY(0) scale(0.97);
         }
 
         /* ===== STATS CARDS ===== */
@@ -190,20 +206,20 @@
         .step-card {
             background: var(--white);
             border-radius: 15px;
-            padding: 1.5rem;
+            padding: 1.4rem;
             box-shadow: var(--shadow);
             transition: all 0.4s ease;
             height: 100%;
         }
 
         .step-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: var(--shadow-hover);
         }
 
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             background: linear-gradient(135deg, var(--primary-coral), var(--lavender));
             color: var(--white);
             border-radius: 50%;
@@ -211,7 +227,7 @@
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             flex-shrink: 0;
         }
 
@@ -234,16 +250,23 @@
             color: var(--midnight);
         }
 
+        /* ===== FINAL CTA ===== */
+        .final-cta-card {
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 16px;
+            border: 0;
+        }
+
         /* ===== FORM POPUP ===== */
         .form-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.65);
             backdrop-filter: blur(8px);
             z-index: 9999;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.35s ease;
         }
 
         .form-backdrop.show {
@@ -255,14 +278,14 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.92);
             z-index: 10000;
             max-width: 500px;
             width: 90%;
-            max-height: 85vh;
+            max-height: 90vh;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.35s ease;
         }
 
         #formContainer.show {
@@ -271,32 +294,89 @@
             transform: translate(-50%, -50%) scale(1);
         }
 
-        .form-control, .form-select {
+        .form-card {
+            border-radius: 16px;
+            box-shadow: var(--shadow-hover);
+            overflow: hidden;
+        }
+
+        .form-control,
+        .form-select {
             border: 2px solid #E5E5E5;
             border-radius: 8px;
             padding: 0.6rem 0.9rem;
             transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
 
-        .form-control:focus, .form-select:focus {
+        .form-control:focus,
+        .form-select:focus {
             border-color: var(--primary-coral);
             box-shadow: 0 0 0 4px rgba(255, 94, 142, 0.15);
         }
 
-        /* ===== MOBILE OPTIMIZED ===== */
-        @media (max-width: 768px) {
-            section { padding: 40px 0; }
-            .hero-section { padding: 50px 0 30px; }
-            .about-img { height: 280px; }
-            .counter { font-size: 1.6rem; }
-            .wa-btn { width: 100%; justify-content: center; }
-            h1.display-3 { font-size: 2rem; }
-            h2.display-5 { font-size: 1.5rem; }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .about-content {
+                padding-left: 0;
+            }
         }
 
-        /* ===== ACCESSIBILITY ===== */
+        @media (max-width: 768px) {
+            section {
+                padding: 45px 0;
+            }
+            .hero-section {
+                padding: 60px 0 35px;
+            }
+            .hero-title {
+                font-size: 2.1rem;
+            }
+            .hero-text-compact {
+                font-size: 0.98rem;
+                padding: 0 12px;
+            }
+            .about-img {
+                height: 320px;
+            }
+            .counter {
+                font-size: 1.6rem;
+            }
+            .wa-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .badge-custom {
+                font-size: 0.78rem;
+                padding: 0.45rem 1.2rem;
+            }
+            .about-img {
+                height: 260px;
+            }
+            .step-card {
+                padding: 1.2rem;
+            }
+            .step-number {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+            .final-cta-card {
+                padding: 1.5rem !important;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
@@ -306,11 +386,13 @@
     <div class="form-backdrop" id="formBackdrop"></div>
 
     <!-- ===== HERO SECTION ===== -->
-    <section class="hero-section text-center">
+    <section class="hero-section">
         <div class="container position-relative">
-            <div class="badge-custom animate-stagger mb-3" style="--order: 1;">🚺 Women Only Community</div>
+            <div class="badge-custom animate-stagger mb-2" style="--order: 1;">
+                🚺 Women Only Community
+            </div>
             
-            <h1 class="display-3 fw-bold gradient-text mb-2 animate-stagger" style="--order: 2;">
+            <h1 class="hero-title fw-bold gradient-text mb-2 animate-stagger" style="--order: 2;">
                 Join a Growing Community of Women
             </h1>
             <p class="hero-text-compact text-muted animate-stagger" style="--order: 3;">
@@ -320,11 +402,11 @@
     </section>
 
     <!-- ===== ABOUT SECTION ===== -->
-    <section class="py-5 bg-white">
+    <section class="bg-white">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6 animate-stagger" style="--order: 1;">
-                    <!-- ⚠️ Yahan apna naya image URL daalna -->
+                    <!-- TODO: yahan apna actual photo link lagana -->
                     <img src="https://via.placeholder.com/800x800.png?text=Farheen+Almas" alt="Farheen Almas" class="about-img" loading="lazy">
                 </div>
                 <div class="col-lg-6 animate-stagger about-content" style="--order: 2;">
@@ -334,12 +416,14 @@
                     <div class="mb-3">
                         <p class="fs-5 d-flex align-items-center gap-3 mb-2">🏡 Ek homemaker</p>
                         <p class="fs-5 d-flex align-items-center gap-3 mb-2">💻 Digital skills par kaam karti hoon</p>
-                        <p class="fs-5 d-flex align-items-center gap-3">🎯 Aur women ko online skills sikhane mein madad karti hoon</p>
+                        <p class="fs-5 d-flex align-items-center gap-3">
+                            🎯 Aur women ko online skills sikhane mein madad karti hoon
+                        </p>
                     </div>
                     
                     <div class="p-3 rounded-2 mb-3" style="background: linear-gradient(135deg, var(--cream), var(--white));">
                         <h3 class="h5 fw-bold mb-2">🎯 Mera Vision:</h3>
-                        <p class="fs-5 fw-semibold mb-0" style="color: var(--midnight);">
+                        <p class="fs-6 fs-md-5 fw-semibold mb-0" style="color: var(--midnight);">
                             "Empowering Females to Empower" – taaki har lady apne liye khud opportunities create kar sake.
                         </p>
                     </div>
@@ -350,22 +434,22 @@
                     </button>
 
                     <div class="row g-3">
-                        <div class="col-md-4">
+                        <div class="col-6 col-md-4">
                             <div class="stat-card">
                                 <div class="counter" data-target="5" data-suffix="+">0</div>
                                 <div class="text-muted small">Years Guiding Women</div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-6 col-md-4">
                             <div class="stat-card">
                                 <div class="counter" data-target="300" data-suffix="+">0</div>
                                 <div class="text-muted small">Women Personally Guided</div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-12 col-md-4">
                             <div class="stat-card">
                                 <div class="counter" data-target="1000" data-suffix="+">0</div>
-                                <div class="text-muted small">Live & Online Sessions Done</div>
+                                <div class="text-muted small">Sessions & Workshops Done</div>
                             </div>
                         </div>
                     </div>
@@ -375,50 +459,58 @@
     </section>
 
     <!-- ===== STEPS SECTION ===== -->
-    <section class="py-5 bg-white">
+    <section class="bg-white">
         <div class="container">
             <h2 class="text-center display-5 fw-bold mb-4">What Happens When You Join?</h2>
             <div class="row g-3">
                 <div class="col-md-6 col-lg-3">
-                    <div class="step-card">
+                    <div class="step-card h-100">
                         <div class="d-flex align-items-start gap-3">
                             <div class="step-number">1</div>
                             <div>
-                                <h3 class="h5 fw-bold mb-2">Instant Connection</h3>
-                                <p class="text-muted mb-0 small">Direct WhatsApp access to Farheen & support team for guidance.</p>
+                                <h3 class="h6 fw-bold mb-2">Instant Connection</h3>
+                                <p class="text-muted mb-0 small">
+                                    Direct WhatsApp access to Farheen & support team for guidance aur basic clarity.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="step-card">
+                    <div class="step-card h-100">
                         <div class="d-flex align-items-start gap-3">
                             <div class="step-number">2</div>
                             <div>
-                                <h3 class="h5 fw-bold mb-2">Complete Access</h3>
-                                <p class="text-muted mb-0 small">Step-by-step learning system jo aapko clear roadmap deta hai.</p>
+                                <h3 class="h6 fw-bold mb-2">Complete Access</h3>
+                                <p class="text-muted mb-0 small">
+                                    Step-by-step learning system jo aapko clear roadmap deta hai – kis sequence mein kya seekhna hai.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="step-card">
+                    <div class="step-card h-100">
                         <div class="d-flex align-items-start gap-3">
                             <div class="step-number">3</div>
                             <div>
-                                <h3 class="h5 fw-bold mb-2">Daily Mentorship</h3>
-                                <p class="text-muted mb-0 small">Regular mentorship, reminders & community support for consistency.</p>
+                                <h3 class="h6 fw-bold mb-2">Daily Mentorship</h3>
+                                <p class="text-muted mb-0 small">
+                                    Regular mentorship, reminders & community support jo aapko consistently active rakhta hai.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="step-card">
+                    <div class="step-card h-100">
                         <div class="d-flex align-items-start gap-3">
                             <div class="step-number">4</div>
                             <div>
-                                <h3 class="h5 fw-bold mb-2">Practical Implementation</h3>
-                                <p class="text-muted mb-0 small">Aap jo seekhti hain usko online projects mein apply karna start karti hain.</p>
+                                <h3 class="h6 fw-bold mb-2">Practical Implementation</h3>
+                                <p class="text-muted mb-0 small">
+                                    Jo bhi skills aap seekhti hain, unko real online activities & projects mein apply karna start karti hain.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -435,36 +527,45 @@
     </section>
 
     <!-- ===== STATS SECTION ===== -->
-    <section class="py-5" style="background: linear-gradient(135deg, var(--cream), var(--white));">
+    <section style="background: linear-gradient(135deg, var(--cream), var(--white));">
         <div class="container">
             <h2 class="text-center display-5 fw-bold mb-4">Know Your Coach</h2>
             <div class="row g-3 align-items-center">
                 <div class="col-md-6">
-                    <div class="d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm" style="background: linear-gradient(135deg, var(--cream), var(--white));">
-                        <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-coral), var(--lavender));">
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm"
+                         style="background: linear-gradient(135deg, var(--cream), var(--white));">
+                        <div class="text-white d-flex align-items-center justify-content-center rounded-circle"
+                             style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-coral), var(--lavender));">
                             ⭐
                         </div>
                         <div>
-                            <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="5" data-suffix="+">0</span></h3>
-                            <p class="mb-0 text-muted fs-5">Years of Digital Experience</p>
+                            <h3 class="fw-bold mb-1 fs-2">
+                                <span class="counter" data-target="5" data-suffix="+">0</span>
+                            </h3>
+                            <p class="mb-0 text-muted fs-6 fs-md-5">Years of Digital Experience</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm" style="background: linear-gradient(135deg, var(--white), var(--cream));">
-                        <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--lavender), var(--midnight));">
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm"
+                         style="background: linear-gradient(135deg, var(--white), var(--cream));">
+                        <div class="text-white d-flex align-items-center justify-content-center rounded-circle"
+                             style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--lavender), var(--midnight));">
                             👥
                         </div>
                         <div>
-                            <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="1000" data-suffix="+">0</span></h3>
-                            <p class="mb-0 text-muted fs-5">Learners Reached Through Training</p>
+                            <h3 class="fw-bold mb-1 fs-2">
+                                <span class="counter" data-target="1000" data-suffix="+">0</span>
+                            </h3>
+                            <p class="mb-0 text-muted fs-6 fs-md-5">Learners Reached Through Training</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <div class="p-4 rounded-3 shadow-lg text-white" style="background: linear-gradient(135deg, var(--midnight), var(--primary-coral));">
-                        <h3 class="fw-bold fs-3 mb-2">🔥 Now it's YOUR time</h3>
+                    <div class="p-4 rounded-3 shadow-lg text-white"
+                         style="background: linear-gradient(135deg, var(--midnight), var(--primary-coral));">
+                        <h3 class="fw-bold fs-4 mb-2">🔥 Now it's YOUR time</h3>
                         <p class="small opacity-75 mb-0">
-                            Yeh program aapko clear direction, support aur skills deta hai – 
-                            bina unrealistic promises, bina guaranteed earning claims. 
+                            Yeh program aapko clear direction, skills aur supportive community deta hai – 
+                            bina unrealistic promises, bina guaranteed earning claims.
                             Aapka pace, aapki journey, hamara support.
                         </p>
                     </div>
@@ -474,7 +575,7 @@
     </section>
 
     <!-- ===== FAQ SECTION ===== -->
-    <section class="py-5 bg-white">
+    <section class="bg-white">
         <div class="container">
             <h2 class="text-center display-5 fw-bold mb-4">Frequently Asked Questions</h2>
             <div class="row justify-content-center">
@@ -488,7 +589,9 @@
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Aap digital skills seekhengi – jaise social media handling, content creation, basic digital marketing aur online branding. Sab kuch legal, ethical aur skill-based hai.
+                                    Aap digital skills seekhengi – jaise social media handling, content creation, 
+                                    basic digital marketing aur online branding. Sab kuch legal, ethical 
+                                    aur skill-based hai, koi shortcut ya scheme nahi.
                                 </div>
                             </div>
                         </div>
@@ -500,7 +603,9 @@
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Haan, yeh ek genuine skill-building & guidance based program hai. Focus learning, practice aur long-term growth par hota hai – koi shortcut, scheme ya guaranteed earning claim nahi hota.
+                                    Haan, yeh ek genuine skill-building & guidance based program hai. 
+                                    Focus learning, practice aur long-term growth par hota hai – 
+                                    koi guaranteed earning claim ya unrealistic promise nahi kiya jata.
                                 </div>
                             </div>
                         </div>
@@ -512,7 +617,9 @@
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Aap apni routine ke hisaab se decide kar sakti hain. Generally 1–2 ghante roze focus se dena ek strong start ke liye kaafi hota hai. Consistency sabse important hai.
+                                    Aap apni routine ke hisaab se decide kar sakti hain. 
+                                    Generally 1–2 ghante roze focus se dena ek strong start ke liye kaafi hota hai. 
+                                    Consistency sabse important factor hai.
                                 </div>
                             </div>
                         </div>
@@ -524,7 +631,11 @@
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Har insaan ka pace alag hota hai. Kuch logon ko kuch hafton mein confidence feel hone lagta hai, kuch ko thoda zyada time lag sakta hai. Hum kisi earning ka fixed time promise nahi karte – sirf skills, support aur direction provide karte hain.
+                                    Har insaan ka pace alag hota hai. 
+                                    Kuch logon ko kuch hafton mein confidence feel hone lagta hai, 
+                                    kuch ko thoda zyada time lag sakta hai. 
+                                    Hum koi earning ka fixed time promise nahi karte – 
+                                    sirf skills, support aur direction provide karte hain.
                                 </div>
                             </div>
                         </div>
@@ -536,7 +647,9 @@
                             </h2>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Nahi, koi prior experience zaroori nahi. Program is tarah design hai ki bilkul basic se start kiya ja sake. Hindi + simple English mein samjhaya jata hai.
+                                    Nahi, koi prior experience zaroori nahi. 
+                                    Program is tarah design hai ki bilkul basic se start kiya ja sake. 
+                                    Hindi + simple English mein sab kuch explain kiya jata hai.
                                 </div>
                             </div>
                         </div>
@@ -548,7 +661,9 @@
                             </h2>
                             <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Aapko WhatsApp support, regular guidance, community access aur check-ins milte rahenge. Doubts clear karne mein team aapke saath rahegi.
+                                    Aapko WhatsApp support, regular guidance, 
+                                    community access aur check-ins milte rahenge. 
+                                    Doubts clear karne mein team aapke saath rahegi.
                                 </div>
                             </div>
                         </div>
@@ -560,7 +675,9 @@
                             </h2>
                             <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Haan, ek nominal training fee hoti hai jo aapke learning material, mentorship aur support ke liye hoti hai. Koi hidden charges ya extra forced investment nahi hota.
+                                    Haan, ek nominal training fee hoti hai jo aapke learning material, 
+                                    mentorship aur support ke liye hoti hai. 
+                                    Koi hidden charges ya extra forced investment nahi hota.
                                 </div>
                             </div>
                         </div>
@@ -572,7 +689,9 @@
                             </h2>
                             <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Bilkul. Program is tarah banaya gaya hai ki aap apne existing routine (studies, home responsibilities ya work) ke saath manage kar sakti hain. Flexible timing aur self-paced learning hoti hai.
+                                    Bilkul. Program is tarah banaya gaya hai ki aap apne existing routine 
+                                    (studies, home responsibilities ya work) ke saath manage kar sakti hain. 
+                                    Flexible timing aur self-paced learning hoti hai.
                                 </div>
                             </div>
                         </div>
@@ -583,14 +702,18 @@
     </section>
 
     <!-- ===== FINAL CTA SECTION ===== -->
-    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--midnight), var(--primary-coral));">
+    <section style="background: linear-gradient(135deg, var(--midnight), var(--primary-coral));" class="text-white">
         <div class="container text-center">
             <h2 class="display-4 fw-bold mb-3">Ready to Start Your Next Chapter?</h2>
-            <p class="fs-5 mb-4">Join a women-only space where you learn digital skills, get guidance, and grow with clarity.</p>
+            <p class="fs-5 mb-4">
+                Join a women-only space where you learn digital skills, get guidance, and grow with clarity.
+            </p>
             
-            <div class="card bg-white bg-opacity-35 border-0 p-4 p-md-5 mb-4">
+            <div class="card final-cta-card p-4 p-md-5 mb-4">
                 <h3 class="h4 fw-bold mb-3">📲 How to Start?</h3>
-                <p class="fs-5 mb-3">Bas mujhe WhatsApp par message karein, aur ye details ready rakhein:</p>
+                <p class="fs-5 mb-3">
+                    Bas mujhe WhatsApp par message karein, aur ye details ready rakhein:
+                </p>
                 <div class="row g-2 mb-3">
                     <div class="col-md-4">
                         <div class="bg-white bg-opacity-30 p-3 rounded">
@@ -608,9 +731,12 @@
                         </div>
                     </div>
                 </div>
-                <p class="fs-6 fw-semibold mb-3">📌 Save My Number: 9537384390</p>
+                <p class="fs-6 fw-semibold mb-3">
+                    📌 Save My Number: <strong>9537384390</strong>
+                </p>
                 
-                <button class="wa-btn open-any" data-source="Final CTA" style="background: white; color: var(--success);">
+                <button class="wa-btn open-any" data-source="Final CTA"
+                        style="background: white; color: var(--success);">
                     <i data-lucide="message-circle" width="22"></i>
                     Message on WhatsApp Now
                 </button>
@@ -632,7 +758,9 @@
                 </div>
             </div>
             
-            <p class="fs-6 mb-2">🌟 Empower her with skills • 🌈 Support her with vision • 🚀 Dreams to direction</p>
+            <p class="fs-6 mb-2">
+                🌟 Empower her with skills • 🌈 Support her with vision • 🚀 Dreams to direction
+            </p>
             <p class="fs-4 fw-bold mb-1">❤ With Strength & Sincerity, Farheen Almas</p>
             <p class="fs-6 opacity-90 mb-0">👩‍🏫 Empowering Females to Empower</p>
         </div>
@@ -645,7 +773,7 @@
                 <button id="closeFormBtn" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></button>
                 <div class="text-center mb-4">
                     <h2 class="h4 fw-bold mb-1">🚀 Start Your Journey</h2>
-                    <p class="text-muted small">Fill details to get started</p>
+                    <p class="text-muted small mb-0">Fill details to get started</p>
                 </div>
                 <form id="mainForm" novalidate>
                     <input type="hidden" id="sourceInfo" name="sourceInfo">
@@ -692,7 +820,9 @@
                             </select>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="wa-btn w-100">📲 Send to WhatsApp</button>
+                            <button type="submit" class="wa-btn w-100 mt-1">
+                                📲 Send to WhatsApp
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -704,10 +834,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // ===== ICONS =====
-        lucide.createIcons();
+        // ICONS
+        if (window.lucide) {
+            lucide.createIcons();
+        }
 
-        // ===== COUNTER ANIMATION =====
+        // COUNTER ANIMATION
         const counters = document.querySelectorAll('.counter');
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -731,7 +863,7 @@
         }, { threshold: 0.3 });
         counters.forEach(counter => counterObserver.observe(counter));
 
-        // ===== FORM LOGIC + SHEETS + PIXEL + WHATSAPP =====
+        // FORM LOGIC
         const formBackdrop = document.getElementById('formBackdrop');
         const formContainer = document.getElementById('formContainer');
         const mainForm = document.getElementById('mainForm');
@@ -739,7 +871,7 @@
         const closeFormBtn = document.getElementById('closeFormBtn');
         const WA_NUMBER_INT = "919537384390"; // 9537384390 with country code
         
-        // ✅ GOOGLE SHEETS URL (same as aapka)
+        // GOOGLE SHEETS URL (same as aapka)
         const SHEET_URL = "https://script.google.com/macros/s/AKfycbzxoesXF7YUwbK3yb7jqhcBFW_4kpe-XaABuowrj3IfijhJjTqngbvLzcUrZp1rq9z1/exec";
 
         function openForm(source = 'site') {
@@ -767,7 +899,7 @@
             }
         });
 
-        // ===== SUBMIT =====
+        // SUBMIT HANDLER
         mainForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('inp_name').value.trim();
@@ -792,7 +924,7 @@
                 timestamp: new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata"})
             };
 
-            // SEND TO GOOGLE SHEETS IN BACKGROUND
+            // Send to Google Sheets (background)
             fetch(`${SHEET_URL}?` + new URLSearchParams(sheetData), {
                 method: 'GET',
                 mode: 'no-cors'
@@ -800,7 +932,7 @@
                 console.error('Error sending to Sheets:', error);
             });
 
-            // META PIXEL EVENTS
+            // Meta Pixel Events
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Contact');
                 fbq('track', 'Lead', {
@@ -810,7 +942,7 @@
                 });
             }
 
-            // WHATSAPP MESSAGE (no earning/guarantee words)
+            // WhatsApp Message (safe copy)
             const message = encodeURIComponent(
 `Hello Farheen Ma'am,
 
