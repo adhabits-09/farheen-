@@ -34,7 +34,7 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1294526649348599&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Snap Pixel Code -->
+  <!-- Snap Pixel -->
   <script type='text/javascript'>
   (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
   {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
@@ -42,18 +42,12 @@
   r.src=n;var u=t.getElementsByTagName(s)[0];
   u.parentNode.insertBefore(r,u);})(window,document,
   'https://sc-static.net/scevent.min.js');
-
-  snaptr('init', '8a4d6b88-306a-429e-897a-fc74a5e763f5', {
- 
-  });
-
+  snaptr('init', '8a4d6b88-306a-429e-897a-fc74a5e763f5', {});
   snaptr('track', 'PAGE_VIEW');
-
   </script>
-  <!-- End Snap Pixel Code -->
 
   <style>
-    /* ===== FARHEEN'S WARM THEME COLORS ===== */
+    /* ===== FARHEEN'S WARM THEME ===== */
     :root{
       --primary-pink: #FF5E8E;
       --coral: #FF6B6B;
@@ -78,39 +72,25 @@
       line-height:1.6;
       overflow-x:hidden;
     }
-
-    /* ===== LIGHT EFFECTS CSS ===== */
-    @keyframes pulseGlowWarm {
+    @keyframes pulseGlowWarm{
       0%,100%{box-shadow:0 0 20px rgba(255,107,107,.4);}
       50%{box-shadow:0 0 40px rgba(255,107,107,.8);}
     }
-    .glow-pulse{
-      animation:pulseGlowWarm 2.5s infinite;
-      position:relative;
-      z-index:1;
-    }
+    .glow-pulse{animation:pulseGlowWarm 2.5s infinite;position:relative;z-index:1;}
     @keyframes shimmer{
       0%{background-position:-200% 0;}
       100%{background-position:200% 0;}
     }
-    .shine-effect{
-      position:relative;
-      overflow:hidden;
-    }
+    .shine-effect{position:relative;overflow:hidden;}
     .shine-effect::before{
       content:'';
       position:absolute;
-      top:-50%;
-      left:-50%;
-      width:200%;
-      height:200%;
+      top:-50%;left:-50%;
+      width:200%;height:200%;
       background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);
       background-size:200% 100%;
       animation:shimmer 3s infinite linear;
-      z-index:0;
-      transform:rotate(30deg);
-      opacity:0;
-      transition:opacity .3s ease;
+      z-index:0;transform:rotate(30deg);opacity:0;transition:opacity .3s ease;
     }
     .shine-effect:hover::before{opacity:1;}
     .glow-border{
@@ -123,38 +103,12 @@
       box-shadow:0 0 25px rgba(233,30,99,.4);
       transform:translateY(-3px);
     }
-    @keyframes buttonShine{
-      0%{transform:translateX(-100%) translateY(-100%) rotate(30deg);opacity:0;}
-      50%{opacity:1;}
-      100%{transform:translateX(100%) translateY(100%) rotate(30deg);opacity:0;}
-    }
     @keyframes fadeInUp{
       from{opacity:0;transform:translateY(30px);}
       to{opacity:1;transform:translateY(0);}
     }
     .animate-fade-in{animation:fadeInUp .6s ease-out forwards;opacity:0;}
     .animate-stagger{animation:fadeInUp .6s ease-out forwards;animation-delay:calc(var(--order) * .1s);opacity:0;}
-    
-    @keyframes white-glitch{
-      0%,100%{transform:translateX(0) skew(0deg);opacity:1;}
-      10%{transform:translateX(-2px) skew(-1deg);opacity:.9;}
-      20%{transform:translateX(2px) skew(1deg);opacity:1;}
-      30%{transform:translateX(-1px) skew(0deg);opacity:.95;}
-      40%{transform:translateX(1px) skew(-.5deg);opacity:1;}
-      50%{transform:translateX(-3px) skew(.5deg);opacity:.9;}
-      60%{transform:translateX(3px) skew(-1deg);opacity:1;}
-    }
-    .wa-btn.glitch-effect:hover{animation:white-glitch .4s ease-in-out;}
-    .wa-btn.glitch-effect::before{
-      content:'';
-      position:absolute;
-      top:0;left:-100%;
-      width:100%;height:100%;
-      background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.6) 50%,transparent 100%);
-      transition:left .6s;z-index:1;
-    }
-    .wa-btn.glitch-effect:hover::before{left:100%;}
-
     section{padding:50px 0;position:relative;}
     .hero-section{
       background:linear-gradient(135deg,var(--pure-white),var(--creamy-peach));
@@ -171,9 +125,7 @@
       display:inline-block;
       margin-bottom:1rem;
       box-shadow:var(--warm-shadow);
-      position:relative;
-      overflow:hidden;
-      border:none;
+      position:relative;overflow:hidden;border:none;
     }
     .gradient-text{
       background:linear-gradient(135deg,var(--charcoal),var(--primary-pink));
@@ -213,11 +165,7 @@
     }
     .wa-btn:active{transform:translateY(0) scale(.98);}
     .wa-btn>*{position:relative;z-index:1;}
-
-    /* About Section */
-    .about-content {
-      padding-left: 0.5rem;
-    }
+    .about-content{padding-left: .5rem;}
     .stat-card{
       background:var(--pure-white);
       padding:1.25rem;
@@ -236,8 +184,6 @@
       font-weight:800;
       color:var(--primary-pink);
     }
-
-    /* Feedback Section */
     .feedback-viewport{
       overflow:hidden;
       margin:1.5rem 0;
@@ -276,8 +222,6 @@
       object-fit:cover;
       display:block;
     }
-
-    /* Steps Section */
     .step-card{
       background:var(--pure-white);
       border-radius:15px;
@@ -302,8 +246,6 @@
       font-size:1.3rem;
       flex-shrink:0;
     }
-
-    /* FAQ Section */
     .accordion-item{
       border:none;
       border-radius:10px !important;
@@ -319,8 +261,6 @@
       background:linear-gradient(135deg,var(--creamy-peach),var(--pure-white));
       color:var(--charcoal);
     }
-
-    /* Form Popup */
     .form-backdrop{
       position:fixed;inset:0;
       background:rgba(0,0,0,.7);
@@ -357,7 +297,6 @@
       border-color:var(--primary-pink);
       box-shadow:0 0 0 4px rgba(233,30,99,.15);
     }
-
     @media(max-width:768px){
       section{padding:40px 0;}
       .hero-section{padding:50px 0 30px;}
@@ -370,7 +309,27 @@
     @media(prefers-reduced-motion:reduce){
       *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
       .feedback-track{animation:none !important;}
-      .wa-btn.glitch-effect:hover{animation:none !important;}
+    }
+
+    /* ===== PRIVACY-MODAL STYLES ===== */
+    .pp-link{color:var(--lavender);font-weight:600;cursor:pointer;text-decoration:underline}
+    .pp-overlay{position:fixed;inset:0;background:rgba(13,36,64,.75);backdrop-filter:blur(4px);z-index:9999;opacity:0;visibility:hidden;transition:opacity .3s ease}
+    .pp-overlay.show{opacity:1;visibility:visible}
+    .pp-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:90%;max-width:560px;max-height:86vh;background:#fff;border-radius:16px;box-shadow:0 20px 40px rgba(46,94,153,.25);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:all .3s ease}
+    .pp-overlay.show .pp-modal{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+    .pp-header{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #e7f0fa;flex-shrink:0}
+    .pp-title{font-size:1.25rem;font-weight:700;color:#2e5e99}
+    .pp-close{background:none;border:none;font-size:1.5rem;color:#7ba4d0;cursor:pointer;transition:color .2s}
+    .pp-close:hover{color:#2e5e99}
+    .pp-body{padding:1.5rem;overflow-y:auto}
+    .pp-body h3{font-size:1rem;font-weight:600;margin:1rem 0 .5rem;color:#2e5e99}
+    .pp-body h3:first-child{margin-top:0}
+    .pp-body p{margin-bottom:.75rem;font-size:.95rem}
+    .pp-footer{margin-top:1rem;font-size:.85rem;font-weight:600;text-align:center;color:#2e5e99}
+    @media (max-width:600px){
+      .pp-modal{width:92%;border-radius:12px}
+      .pp-header{padding:1rem}
+      .pp-body{padding:1rem}
     }
   </style>
 </head>
@@ -379,7 +338,7 @@
 <!-- FORM POPUP BACKDROP -->
 <div class="form-backdrop" id="formBackdrop"></div>
 
-<!-- ===== HERO SECTION ===== -->
+<!-- ================= HERO ================= -->
 <section class="hero-section text-center">
   <div class="container position-relative">
     <div class="badge-custom animate-stagger glow-pulse mb-3" style="--order:1;">🚺 Women Only Community</div>
@@ -392,7 +351,7 @@
   </div>
 </section>
 
-<!-- ===== ABOUT SECTION WITH VIDEO ===== -->
+<!-- ================= ABOUT + VIDEO ================= -->
 <section class="py-5 bg-white">
   <div class="container">
     <div class="row g-4 align-items-center">
@@ -405,19 +364,16 @@
       <div class="col-lg-6 animate-stagger about-content" style="--order:2;">
         <div class="badge-custom mb-2 glow-pulse">💫 Your Coach</div>
         <h2 class="display-5 fw-bold mb-3">Hi, I'm Farheen Almas</h2>
-        
         <div class="mb-4">
           <p class="fs-5 mb-2">🏡 Ek homemaker se skill mentor tak ka safar</p>
           <p class="fs-5 mb-2">💻 Freelancer & Digital Skills Expert</p>
           <p class="fs-5 mb-2">🎯 My Vision: "Empowering Females to Empower"</p>
           <p class="fs-5">Ab aur bhi strong ban ke saath me growth karna chahti hoon - ready ho toh WhatsApp karein 👇</p>
         </div>
-        
         <button class="wa-btn mb-4 open-any shine-effect glitch-effect" data-source="About Section">
           <i data-lucide="message-circle" width="20"></i>
           Connect on WhatsApp
         </button>
-
         <div class="row g-3">
           <div class="col-md-4">
             <div class="stat-card shine-effect">
@@ -443,17 +399,13 @@
   </div>
 </section>
 
-<!-- ===== REMOVED SEPARATE VIDEO SECTION (now in About) ===== -->
-
-<!-- ===== AUTO-SCROLLING FEEDBACK SECTION ===== -->
+<!-- ================= FEEDBACK SCROLL ================= -->
 <section class="py-5" style="background: linear-gradient(135deg, var(--creamy-peach), var(--pure-white));">
   <div class="container">
     <h2 class="text-center display-5 fw-bold mb-3 animate-stagger" style="--order:1;">✨ Real Success Stories</h2>
     <p class="text-center text-muted mb-4 animate-stagger" style="--order:2;">See authentic feedback from our thriving community</p>
-    
     <div class="feedback-viewport animate-stagger" style="--order:3;">
       <div class="feedback-track">
-        <!-- Original Images -->
         <div class="feedback-item"><img src="https://i.postimg.cc/CxsfTTwk/FArheen-Fb-7.png" alt="Student Success 1" loading="lazy"></div>
         <div class="feedback-item"><img src="https://i.postimg.cc/DwTbMy3b/FArheen-Fb-5.png" alt="Student Success 2" loading="lazy"></div>
         <div class="feedback-item"><img src="https://i.postimg.cc/zGrRcXYJ/FArheen-Fb-4.png" alt="Student Success 3" loading="lazy"></div>
@@ -461,12 +413,11 @@
         <div class="feedback-item"><img src="https://i.postimg.cc/K82gHvhx/FArheen-Fb-2.png" alt="Student Success 5" loading="lazy"></div>
         <div class="feedback-item"><img src="https://i.postimg.cc/Njcrzfvt/FArheen-Fb-1.png" alt="Student Success 6" loading="lazy"></div>
         <div class="feedback-item"><img src="https://i.postimg.cc/FFwS0VP8/FArheen-Fb-6.png" alt="Student Success 7" loading="lazy"></div>
-        <!-- Duplicate for seamless loop -->
+        <!-- duplicates for seamless loop -->
         <div class="feedback-item"><img src="https://i.postimg.cc/Sx2tDdqn/Farheen-Fb-9.jpg" alt="Student Success 1" loading="lazy"></div>
         <div class="feedback-item"><img src="https://i.postimg.cc/FFTWv8H4/Farheen-Fb-10.jpg" alt="Student Success 2" loading="lazy"></div>
       </div>
     </div>
-    
     <div class="text-center mt-4">
       <button class="wa-btn open-any shine-effect glitch-effect" data-source="Feedback Section">
         <i data-lucide="message-circle" width="20"></i>
@@ -476,7 +427,7 @@
   </div>
 </section>
 
-<!-- ===== STEPS SECTION ===== -->
+<!-- ================= STEPS ================= -->
 <section class="py-5 bg-white">
   <div class="container">
     <h2 class="text-center display-5 fw-bold mb-4">What Happens When You Join?</h2>
@@ -526,7 +477,6 @@
         </div>
       </div>
     </div>
-
     <div class="text-center mt-5">
       <button class="wa-btn open-any shine-effect glitch-effect" data-source="Steps">
         <i data-lucide="message-circle" width="20"></i>
@@ -536,7 +486,7 @@
   </div>
 </section>
 
-<!-- ===== FAQ SECTION ===== -->
+<!-- ================= FAQ ================= -->
 <section class="py-5" style="background: linear-gradient(135deg, var(--creamy-peach), var(--pure-white));">
   <div class="container">
     <h2 class="text-center display-5 fw-bold mb-4">Frequently Asked Questions</h2>
@@ -569,12 +519,11 @@
   </div>
 </section>
 
-<!-- ===== FINAL CTA SECTION ===== -->
+<!-- ================= FINAL CTA ================= -->
 <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--midnight), var(--primary-pink));">
   <div class="container text-center">
     <h2 class="display-4 fw-bold mb-3">Ready to Transform Your Life?</h2>
     <p class="fs-5 mb-4">Join thousands of women on their journey to skill-based independence</p>
-    
     <div class="card border-0 p-4 p-md-5 mb-4" style="background: var(--pure-white); color: var(--charcoal);">
       <h3 class="h4 fw-bold mb-3">📲 How to Get Started?</h3>
       <p class="fs-5 mb-3">Bas apni journey start karne ke liye ye details taiyaar rakhiye:</p>
@@ -583,25 +532,22 @@
         <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background: var(--creamy-peach);"><strong>🎂 Age:</strong> Your Age</div></div>
         <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background: var(--creamy-peach);"><strong>💼 Profession:</strong> Current Status</div></div>
       </div>
-      
       <button class="wa-btn open-any glow-pulse glitch-effect" data-source="Final CTA" style="background: white; color: var(--coral);">
         <i data-lucide="message-circle" width="22"></i>
         Message on WhatsApp Now
       </button>
     </div>
-    
     <div class="card border-0 p-3 mb-3 glow-border" style="background: rgba(255,255,255,.15);">
       <h4 class="h5 fw-bold mb-2">⏳ Within 24 hours:</h4>
       <p class="mb-0">✅ Clear Roadmap</p>
     </div>
-    
     <p class="fs-6 mb-2">✨ Empower her with skills • 🌈 Support her with vision • 🚀 Dreams to direction</p>
     <p class="fs-4 fw-bold mb-1">❤️ <strong>With Strength & Sincerity, Farheen Almas</strong></p>
-    <p class="fs-6 opacity-90 mb-0">Creat By Adhabits </p>
+    <p class="fs-6 opacity-90 mb-0">Creat By Adhabits <span class="pp-link">Privacy Policy</span></p>
   </div>
 </section>
 
-<!-- ===== FORM POPUP ===== -->
+<!-- ================= FORM POPUP ================= -->
 <div id="formContainer">
   <div class="card form-card glow-pulse">
     <div class="card-body p-4 position-relative">
@@ -653,13 +599,38 @@
   </div>
 </div>
 
+<!-- ================= PRIVACY MODAL ================= -->
+<div class="pp-overlay" id="ppOverlay">
+  <div class="pp-modal">
+    <div class="pp-header">
+      <div class="pp-title">Privacy Policy</div>
+      <button class="pp-close" id="ppClose">&times;</button>
+    </div>
+    <div class="pp-body">
+      <h3>Information We Collect</h3>
+      <p>We collect information you provide directly to us, such as your name, phone number, and email address when you contact us through WhatsApp or other channels.</p>
+
+      <h3>How We Use Your Information</h3>
+      <p>Your information is used solely to communicate with you about our training programs, provide customer support, and send updates about courses you've expressed interest in.</p>
+
+      <h3>Data Protection</h3>
+      <p>We implement appropriate security measures to protect your personal information. Your data is never sold or shared with third parties for marketing purposes.</p>
+
+      <h3>Your Rights</h3>
+      <p>You have the right to access, correct, or delete your personal information at any time. Contact us to exercise these rights or for any privacy-related concerns.</p>
+
+      <div class="pp-footer">By using our services, you agree to this privacy policy. Last updated: December 2024</div>
+    </div>
+  </div>
+</div>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-/* ===== OPTIMIZED SCRIPT ===== */
+/* ---------- LUCIDE ICONS ---------- */
 lucide.createIcons();
 
-// Counter Animation
+/* ---------- COUNTER ANIMATION ---------- */
 const counters=document.querySelectorAll('.counter');
 const counterObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
@@ -680,14 +651,13 @@ const counterObserver=new IntersectionObserver(entries=>{
 },{threshold:0.3});
 counters.forEach(counter=>counterObserver.observe(counter));
 
-// ===== GOOGLE SHEET + WHATSAPP FORM LOGIC =====
+/* ---------- FORM POPUP ---------- */
 const formBackdrop=document.getElementById('formBackdrop');
 const formContainer=document.getElementById('formContainer');
 const mainForm=document.getElementById('mainForm');
 const sourceInfo=document.getElementById('sourceInfo');
 const closeFormBtn=document.getElementById('closeFormBtn');
 
-// ✅ UPDATED GOOGLE SCRIPT URL
 const SCRIPT_URL="https://script.google.com/macros/s/AKfycby8Q4aqxCQSUD8YMAaYm73_65VEausAGhuyPsmgUnHqpnj8Nyhifv7v_V7gx8CnMmai9g/exec";
 const WA_NUMBER_INT="919724262930";
 
@@ -697,17 +667,14 @@ function openForm(source='site'){
   formContainer.classList.add('show');
   document.body.style.overflow='hidden';
 }
-
 function closeForm(){
   formBackdrop.classList.remove('show');
   formContainer.classList.remove('show');
   document.body.style.overflow='';
   setTimeout(()=>mainForm.reset(),300);
 }
-
 formBackdrop.addEventListener('click',closeForm);
 closeFormBtn.addEventListener('click',closeForm);
-
 document.addEventListener('click',e=>{
   const trigger=e.target.closest('.open-any');
   if(trigger&&!trigger.closest('#formContainer')){
@@ -715,7 +682,6 @@ document.addEventListener('click',e=>{
     openForm(trigger.getAttribute('data-source')||'Website');
   }
 });
-
 mainForm.addEventListener('submit',e=>{
   e.preventDefault();
   const name=document.getElementById('inp_name').value.trim();
@@ -728,8 +694,6 @@ mainForm.addEventListener('submit',e=>{
     alert('Please fill all fields correctly.');
     return;
   }
-
-  // ---- 1) SEND DATA TO GOOGLE SHEET ----
   const formData=new FormData();
   formData.append('name',name);
   formData.append('phone',phone);
@@ -738,38 +702,32 @@ mainForm.addEventListener('submit',e=>{
   formData.append('profession',profession);
   formData.append('source',sourceInfo.value||'Website');
   formData.append('timestamp',new Date().toISOString());
+  fetch(SCRIPT_URL,{method:'POST',body:formData,mode:'no-cors'}).catch(err=>console.error('Sheet error:',err));
 
-  fetch(SCRIPT_URL,{
-    method:'POST',
-    body:formData,
-    mode:'no-cors'
-  }).catch(err=>console.error('Sheet error:',err));
-
-  // ---- 2) WHATSAPP MESSAGE REDIRECT (SIMPLE MESSAGE ONLY) ----
-  // ✅ UPDATED: Simple message without personal data
-  const message=encodeURIComponent(
-    `I'm ready to start my skill journey. Please share next steps.`
-  );
-
+  const message=encodeURIComponent(`I'm ready to start my skill journey. Please share next steps.`);
   if(typeof fbq!=='undefined'){
     fbq('track','Contact');
     fbq('track','Lead',{
-      content_name:'WhatsApp Form',
-      name:name,
-      phone:phone,
-      age:age,
-      gender:gender,
-      profession:profession
+      content_name:'WhatsApp Form',name:name,phone:phone,age:age,gender:gender,profession:profession
     });
   }
-
   window.open(`https://wa.me/${WA_NUMBER_INT}?text=${message}`,'_blank');
   closeForm();
 });
-
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape')closeForm();
 });
+
+/* ---------- PRIVACY MODAL ---------- */
+const ppTrigger=document.querySelector('.pp-link');
+const ppOverlay=document.getElementById('ppOverlay');
+const ppClose=document.getElementById('ppClose');
+function openPP(){ppOverlay.classList.add('show');document.body.style.overflow='hidden';}
+function closePP(){ppOverlay.classList.remove('show');document.body.style.overflow='';}
+ppTrigger.addEventListener('click',openPP);
+ppClose.addEventListener('click',closePP);
+ppOverlay.addEventListener('click',e=>{if(e.target===ppOverlay)closePP();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePP();});
 </script>
 </body>
 </html>
