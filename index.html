@@ -18,7 +18,7 @@
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-  <!-- Meta Pixel -->
+  <!-- Meta Pixel - Simplified -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -370,7 +370,7 @@
           <p class="fs-5 mb-2">🎯 My Vision: "Empowering Females to Empower"</p>
           <p class="fs-5">Ab aur bhi strong ban ke saath me growth karna chahti hoon - ready ho toh WhatsApp karein 👇</p>
         </div>
-        <button class="wa-btn mb-4 open-any shine-effect glitch-effect" data-source="About Section">
+        <button class="wa-btn mb-4 open-any shine-effect" data-source="About Section">
           <i data-lucide="message-circle" width="20"></i>
           Connect on WhatsApp
         </button>
@@ -419,7 +419,7 @@
       </div>
     </div>
     <div class="text-center mt-4">
-      <button class="wa-btn open-any shine-effect glitch-effect" data-source="Feedback Section">
+      <button class="wa-btn open-any shine-effect" data-source="Feedback Section">
         <i data-lucide="message-circle" width="20"></i>
         Join Our Success Stories
       </button>
@@ -478,7 +478,7 @@
       </div>
     </div>
     <div class="text-center mt-5">
-      <button class="wa-btn open-any shine-effect glitch-effect" data-source="Steps">
+      <button class="wa-btn open-any shine-effect" data-source="Steps">
         <i data-lucide="message-circle" width="20"></i>
         Get Started Now
       </button>
@@ -532,7 +532,7 @@
         <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background: var(--creamy-peach);"><strong>🎂 Age:</strong> Your Age</div></div>
         <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background: var(--creamy-peach);"><strong>💼 Profession:</strong> Current Status</div></div>
       </div>
-      <button class="wa-btn open-any glow-pulse glitch-effect" data-source="Final CTA" style="background: white; color: var(--coral);">
+      <button class="wa-btn open-any glow-pulse" data-source="Final CTA" style="background: white; color: var(--coral);">
         <i data-lucide="message-circle" width="22"></i>
         Message on WhatsApp Now
       </button>
@@ -591,7 +591,7 @@
             </select>
           </div>
           <div class="col-12">
-            <button type="submit" class="wa-btn w-100 glitch-effect">📲 Send to WhatsApp</button>
+            <button type="submit" class="wa-btn w-100">📲 Send to WhatsApp</button>
           </div>
         </div>
       </form>
@@ -682,6 +682,8 @@ document.addEventListener('click',e=>{
     openForm(trigger.getAttribute('data-source')||'Website');
   }
 });
+
+/* ---------- SIMPLIFIED FORM SUBMIT - ONLY CONTACT EVENT ---------- */
 mainForm.addEventListener('submit',e=>{
   e.preventDefault();
   const name=document.getElementById('inp_name').value.trim();
@@ -694,6 +696,8 @@ mainForm.addEventListener('submit',e=>{
     alert('Please fill all fields correctly.');
     return;
   }
+  
+  // Google Sheet data (optional - keep for your records)
   const formData=new FormData();
   formData.append('name',name);
   formData.append('phone',phone);
@@ -704,16 +708,17 @@ mainForm.addEventListener('submit',e=>{
   formData.append('timestamp',new Date().toISOString());
   fetch(SCRIPT_URL,{method:'POST',body:formData,mode:'no-cors'}).catch(err=>console.error('Sheet error:',err));
 
-  const message=encodeURIComponent(`I'm ready to start my skill journey. Please share next steps.`);
+  // SIMPLIFIED META PIXEL - ONLY CONTACT EVENT, NO EXTRA PARAMETERS
   if(typeof fbq!=='undefined'){
     fbq('track','Contact');
-    fbq('track','Lead',{
-      content_name:'WhatsApp Form',name:name,phone:phone,age:age,gender:gender,profession:profession
-    });
   }
+
+  // WhatsApp redirect
+  const message=encodeURIComponent(`I'm ready to start my skill journey. Please share next steps.`);
   window.open(`https://wa.me/${WA_NUMBER_INT}?text=${message}`,'_blank');
   closeForm();
 });
+
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape')closeForm();
 });
